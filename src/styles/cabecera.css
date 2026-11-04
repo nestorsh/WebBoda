@@ -1,0 +1,85 @@
+:root{
+  --fondo: #C2B8B6;
+}
+
+.nave{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 28px 7%;
+
+  color: rgb(88, 37, 37);
+  background-color: var(--fondo);
+}
+
+.nave nav {
+  display: flex;
+  gap: 35px;
+}
+
+.nave ul {
+  padding: 0;      /* Borra márgenes internos por defecto */
+  margin: 0;       /* Borra márgenes externos por defecto */
+  gap: 20px;       /* Cambia este número para dar más espacio */
+}
+
+.nave ul a {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.nave ul a:hover {
+  color: #e5ebe6;
+}
+
+
+.menu{
+	display:flex;
+	list-style:none;
+}
+
+.logo img{
+  width:60px;
+  height: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  /* Tus estilos CSS específicos para móviles aquí */
+  .nave {
+    display: flex;
+    padding: 16px 3%;
+  }
+  .nave .menu {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 5px;
+      font-size: 10px;
+      letter-spacing: 0;
+  }
+
+  .nave .menu li{
+    align-items: center;
+    text-align:center;
+  }
+  .nave ul a {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+
+}
+
+@media screen and (max-width: 460px) {
+    .logo img{
+      width:0px;
+      height: 0px;
+    }
+}

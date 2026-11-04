@@ -1,0 +1,47 @@
+:root{
+  --fondo: #C2B8B6;
+}
+
+.wedding-footer {
+  background-color: var(--fondo);
+  color: #555555;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Georgia', serif; /* Tipografía elegante */
+  border-top: 1px solid #eae5de;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-quote {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #333333;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.footer-divider {
+  width: 40px;
+  height: 1px;
+  background-color: #d4af37; /* Toque dorado elegante */
+  margin: 0 auto 20px auto;
+}
+
+.footer-details {
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  color: #666666;
+}
+
+.footer-date {
+  font-weight: bold;
+}
+
+.footer-hashtag {
+  color: #b08d57;
+  font-weight: 500;
+}

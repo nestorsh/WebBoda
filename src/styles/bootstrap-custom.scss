@@ -1,0 +1,17 @@
+// 1. Core obligatorio de Bootstrap
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark"; 
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+
+// 2. Utilidades base (recomendadas para espaciados como mt-3, p-2, etc.)
+@import "bootstrap/scss/utilities";
+
+// 3. SOLO los estilos de lo que vas a usar
+@import "bootstrap/scss/buttons";       // Botones
+@import "bootstrap/scss/forms";         // Formularios (inputs, select, checks)
+@import "bootstrap/scss/nav";           // Estructura base de navegación
+@import "bootstrap/scss/navbar";        // Barra de navegación (Navbar)
+@import "bootstrap/scss/transitions";   // Animaciones para el colapso del menú

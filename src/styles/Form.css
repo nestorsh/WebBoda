@@ -1,0 +1,144 @@
+:root {
+    --cabecera: #ecbdbf;;
+    --aceptar: #8BB9CC;;
+    --body: #F3EBDD;
+}
+
+body {
+    background-color: var(--body);
+}
+
+.container {
+  width: min(100% - 2rem, 1100px);
+  margin-inline: auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+
+.caja {
+    border: 1px solid black;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    background-color: white;
+}
+
+#intro-asistencia{
+    margin-top: 2%;
+    background-color: var(--cabecera);
+    
+    /* Mantenemos tus estilos y corregimos el centrado */
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+    display:block;
+    text-align: center;
+
+    /* Anulamos el padding de la derecha para recuperar la simetría */
+    padding-bottom: 0;
+}
+
+#intro-asistencia h3{
+    display:block;
+    text-align: center;
+}
+
+.emojis{
+    margin-right: 2%;
+}
+
+.botonera {
+    display:block;
+    text-align: center;
+    padding-bottom: 1%;
+
+}
+
+.caja_texto{
+    display:block;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+.caja_texto textarea{
+    width:80%;
+    border-radius: 6px;
+}
+
+#caja_selector{
+    padding-top: 1%;
+}
+
+select {
+    width: 45%;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #333333;
+    background-color: #ffffff;
+}
+
+#selector label{
+    font-weight:bold;
+}
+
+.botonera input{
+    background-color: var(--aceptar);
+    font-weight: 600; /* Texto ligeramente grueso */
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    width:40%;
+    margin-bottom: 2%;
+    margin-top: 3%;
+}
+
+#caja_extra{
+    font-weight:bold;
+}
+
+#caja_extra input{
+     border-radius: 5px;
+}
+
+#caja_extra button{
+    background-color: var(--aceptar);
+    font-weight: 600; /* Texto ligeramente grueso */
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    margin-left: 1%;
+}
+
+.caja label{
+    margin-left: 0.5%
+}
+
+
+.alerta{
+    width:100%;
+    border:1px solid black;
+    border-radius:8px;
+    text-align: center;
+    width: min(100% - 2rem, 1100px);
+    margin-inline: auto;
+    margin-top: 2%;
+    font-weight: bold;
+}
+
+#mensajeExito{
+    background-color: #77c489;
+
+}
+
+#mensajeAviso{
+    background-color: #e0c66e;
+
+}
+
+
