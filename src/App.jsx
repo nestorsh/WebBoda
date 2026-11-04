@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
-import Portada from "./pages/portada";
-import Formulario from "./pages/Formulario";
+import Portada from "./pages/Portada.jsx";
+import Formulario from "./pages/Formulario.jsx";
 
 export default function App() {
     return (
