@@ -1,4 +1,4 @@
-import "../styles/Cabecera.css"
+import "../styles/cabecera.css";
 import { Link,useLocation,useParams } from "react-router-dom";
 import logo from "../assets/logo.png";
 
