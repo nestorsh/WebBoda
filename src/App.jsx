@@ -5,7 +5,7 @@ import Formulario from "./pages/Formulario.jsx";
 
 export default function App() {
     return (
-        <BrowserRouter>
+
             <Routes>
                 <Route
                     path="/"
@@ -24,7 +24,7 @@ export default function App() {
 
 
             </Routes>
-        </BrowserRouter>
+
     );
 }
 
