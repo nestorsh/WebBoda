@@ -31,10 +31,10 @@ function Portada() {
             <div className="portada-texto">
 
               <h1>
-                Kimberley
+                Néstor
                 <span className="subtitulo">
                   <span className="ampersand">&amp;</span>
-                  {" "}Néstor
+                  {" "}Kimberley
                 </span>
               </h1>
 
