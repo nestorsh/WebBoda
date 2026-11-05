@@ -41,7 +41,7 @@ function Portada() {
               <div className="raya" />
 
               <p className="fecha">
-                24 JUNIO 2027
+                24 JULIO 2027
               </p>
 
               <p className="mensaje">
@@ -104,7 +104,7 @@ function Portada() {
                 <img src={imagenAnillos} alt="Imagen anillos" />
               </div>
               <h3>FECHA Y HORA</h3>
-              <p>24 de junio de 2027</p>
+              <p>24 de julio de 2027</p>
               <p>13:15 h</p>
             </article>
 
