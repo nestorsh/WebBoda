@@ -5,7 +5,6 @@ import Formulario from "./pages/Formulario.jsx";
 
 export default function App() {
     return (
-
             <Routes>
                 <Route
                     path="/"
@@ -24,7 +23,6 @@ export default function App() {
 
 
             </Routes>
-
     );
 }
 
