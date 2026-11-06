@@ -88,7 +88,7 @@ export default function Formulario(){
                     id_i:String(invitado.id)
                 });
                 setPermiso(false);
-                setMensajeExitoso("¡Invitado/a registrada!");
+                setMensajeExitoso("¡Invitado/a registrado/a!");
             }else{
                 setMensaje("No se pudo agregar el invitado/a");
             }
