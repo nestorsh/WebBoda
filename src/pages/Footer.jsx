@@ -8,7 +8,7 @@ export default function Footer(){
             <div className="footer-content">
                 <p className="footer-quote">Con la ilusión de compartir nuestro gran día con quienes más queremos.</p>
                     <div className="footer-divider"></div>
-                    <p className="footer-details"> Nos vemos el <span className="footer-date">24 de Julio de 2027</span> | <span className="footer-hashtag">#BodaKimberleyYNéstor</span></p>
+                    <p className="footer-details"> Nos vemos el <span className="footer-date">24 de Julio de 2027</span> | <span className="footer-hashtag">#BodaK&N</span></p>
             </div>
         </footer>
         </>

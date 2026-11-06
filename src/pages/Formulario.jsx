@@ -58,7 +58,8 @@ export default function Formulario(){
                 asistencia:null,
                 menu:null,
                 dieta:null, 
-                denominacion: grupo
+                denominacion: grupo,
+                observaciones: null
             }   
         }
         setInvitado(nInvitado);
@@ -134,6 +135,7 @@ export default function Formulario(){
                 aler: formulario.get("alergias") ?? null,
                 die: formulario.get("dieta") ?? null,
                 men: formulario.get("comida") ?? null,
+                obs: formulario.get("observaciones") ?? null,
             });
             setMensajeExitoso("¡Datos guardados!");
             setInvitadoSeleccionado(0);
@@ -149,12 +151,6 @@ export default function Formulario(){
     return (
         <>
         <Cabecera />
-        {mensajeExitoso && <div id="mensajeExito" className="alerta">
-            <span className="alerta-mensaje">{mensajeExitoso}</span>
-        </div>}
-        {mensaje && <div id="mensajeAviso" className="alerta">
-            <span className="alerta-mensaje">{mensaje}</span>
-        </div>}
         <div className="container">
             <div id="intro-asistencia" className="caja">
                 <div><h3>Formulario Asistencia - {grupo ?? null}</h3></div>
@@ -235,12 +231,31 @@ export default function Formulario(){
                     }         
                     
                 </div></>}
+                {!invitado.bebe && !invitado.menor && 
+                <><div id="sec_dieta" className="caja">
+                    <h4>Por último... ¿te gustaría comentarnos algo que debamos tener en cuenta?</h4>
+                    {invitado.observaciones !== null 
+                        ? <div className="caja_texto">
+                            <textarea id="observaciones" name="observaciones" rows="3" col="3" defaultValue={invitado.observaciones} disabled={!asistencia}></textarea>
+                        </div>
+                        : <div className="caja_texto">
+                            <textarea id="observaciones" name="observaciones" rows="3" col="3" disabled={!asistencia}></textarea>
+                        </div>
+                    }         
+                    
+                </div></>}
                 
                 <div className="botonera">
                     <input type="submit" value="Guardar"></input>
                 </div>
+                
             </form>
-
+            {mensajeExitoso && <div id="mensajeExito" className="alerta">
+                <span className="alerta-mensaje">{mensajeExitoso}</span>
+            </div>}
+            {mensaje && <div id="mensajeAviso" className="alerta">
+                <span className="alerta-mensaje">{mensaje}</span>
+            </div>}
  
         </div>
         

@@ -127,7 +127,7 @@ select {
     text-align: center;
     width: min(100% - 2rem, 1100px);
     margin-inline: auto;
-    margin-top: 2%;
+    margin-bottom: 2%;
     font-weight: bold;
 }
 
