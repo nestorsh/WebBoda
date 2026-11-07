@@ -84,6 +84,11 @@ function Portada() {
             <p className="frase">
               Y queremos compartirlo contigo <span>♡</span>
             </p>
+
+            <Link to={`/inicio/${grupo}#historia`} id="boton-historia" className="boton">
+                CONOCE NUESTRA HISTORIA →
+            </Link>
+
           </div>
 
           <div className="seccion-ilustracion">

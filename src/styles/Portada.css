@@ -288,6 +288,11 @@ svg {
   width: 350px;
 }
 
+#boton-historia{
+  background-color: var(--fucsia);
+  border: 1px solid var(--verde-oscuro);
+}
+
 /* DETALLES DE LA BODA */
 
 .detalles {
