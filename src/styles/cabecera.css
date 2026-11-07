@@ -91,5 +91,10 @@
       width:100%;
     }
 
+    .menu li{
+      flex-grow: 1;
+      flex-basis:0;
+    }
+
     
 }
