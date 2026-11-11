@@ -4,10 +4,10 @@ import "../styles/Portada.css";
 import { Link, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import imagenAnillos from "../assets/anillos.png";
+import imagenFecha from "../assets/fecha.png";
 import imagenCopas from "../assets/copas.png";
 import imagenIglesia from "../assets/iglesia.png";
-import imagenAlianzas from "../assets/anillos_flores.png";
+import imagenInvitacion from "../assets/invitacion.png";
 import collage from "../assets/collage.svg";
 import logo from "../assets/logo.png";
 
@@ -106,7 +106,7 @@ function Portada() {
           <div className="detalles-grid">
             <article className="detalle">
               <div className="icono">
-                <img src={imagenAnillos} alt="Imagen anillos" />
+                <img src={imagenFecha} alt="Imagen anillos" />
               </div>
               <h3>FECHA Y HORA</h3>
               <p>24 de julio de 2027</p>
@@ -148,7 +148,7 @@ function Portada() {
           </div>
 
           <div className="confirmacion-ilustracion">
-            <img src={imagenAlianzas} alt="Imagen anillos" />
+            <img src={imagenInvitacion} alt="Imagen anillos" />
           </div>
         </section>
 
