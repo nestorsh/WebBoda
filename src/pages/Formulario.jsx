@@ -5,6 +5,14 @@ import { useState, useEffect, useRef } from 'react'
 import { supabase } from '../utils/supabase'
 import Form from 'react-bootstrap/Form';
 import { useParams } from "react-router-dom";
+import iConfirmacion from "../assets/confirmacion.png";
+import iDeclinacion from "../assets/declinacion.png";
+import iAlergia from "../assets/iconoAlergia.png";
+import iMusica from "../assets/iconoMusica.png";
+import iCarne from "../assets/carne.png";
+import iPescado from "../assets/pescado.png";
+import iSinGluten from "../assets/sinGluten.png";
+import iVegetariana from "../assets/vegetariana.png";
  
 
 
@@ -169,7 +177,7 @@ export default function Formulario(){
                 {!invitado.bebe && !invitado.menor && permiso && asistencia && <><div id="caja_extra">
                     <br></br>
                     <label htmlFor="invitado_nuevo">Introduce el nombre del invitado/a: </label>
-                    <input type="text" ref={inputRef} id="invitado_nuevo" name="invitado_nuevo"></input>
+                    <input type="text" ref={inputRef} id="invitado_nuevo" name="invitado_nuevo" placeholder="Escribe su nombre..."></input>
                     <button type="button" onClick={insertarInvitado}>Añadir</button>
                 </div></>}
 
@@ -180,11 +188,11 @@ export default function Formulario(){
                     <h4>¿Asistirás?</h4>
                     <div>
                         <input type="radio" id="input_si" name="asistencia" value="true" defaultChecked={invitado.asistencia===true} onChange={(e) => setAsistencia(true)} required></input>
-                        <label htmlFor="input_si">Sí <span className="emojis">&#128525;</span></label>
+                        <label htmlFor="input_si">Sí </label> <div className="emojis"> <img src={iConfirmacion} alt="confirmacion" /></div>
                     </div>
                     <div>
                         <input type="radio" id="input_no" name="asistencia" value="false" defaultChecked={invitado.asistencia===false} onChange={(e) => setAsistencia(false)} required></input>
-                        <label htmlFor="input_no">No <span className="emojis">&#128532;</span></label>
+                        <label htmlFor="input_no">No <div className="emojis"><img src={iDeclinacion} alt="confirmacion" /></div></label>
                     </div>
                 </div>
                 {!invitado.bebe && <><div id="sec_comida" className="caja">
@@ -193,20 +201,20 @@ export default function Formulario(){
                     <>
                     <div>
                         <input type="radio" id="input_carne" name="comida" value="carne" defaultChecked={invitado.menu==="carne"} disabled={!asistencia} required></input>
-                        <label htmlFor="input_carne">Carne <span className="emojis">&#127830;</span></label>
+                        <label htmlFor="input_carne">Carne </label> <div className="emojis"> <img src={iCarne} alt="carne" /></div>
                     </div>
                     
                     <div>
                         <input type="radio" id="input_pescado" name="comida" value="pescado" defaultChecked={invitado.menu==="pescado"} disabled={!asistencia} required></input>
-                        <label htmlFor="input_pescado">Pescado <span className="emojis">&#128031;</span></label>
+                        <label htmlFor="input_pescado">Pescado</label> <div className="emojis"> <img src={iPescado} alt="pescado" /></div>
                     </div>
                     <div>
                         <input type="radio" id="input_vegetariano" name="comida" value="vegetariana" defaultChecked={invitado.menu==="vegetariana"} disabled={!asistencia} required></input>
-                        <label htmlFor="input_vegtariano">Opción vegetariana <span className="emojis">&#129367;</span></label>
+                        <label htmlFor="input_vegtariano">Opción vegetariana</label><div className="emojis"> <img src={iVegetariana} alt="vegetariana" /></div>
                     </div>
                     <div>
                         <input type="radio" id="input_celiaco" name="comida" value="celiaca" defaultChecked={invitado.menu==="celiaca"} disabled={!asistencia} required></input>
-                        <label htmlFor="input_celiaco">Opción celiaca <span className="emojis">&#x1F33E;&#128683;</span></label>
+                        <label htmlFor="input_celiaco">Opción celiaca</label> <div className="emojis"> <img src={iSinGluten} alt="sin gluten" /></div>
                     </div>
                     </>}
                     {invitado.menor &&
