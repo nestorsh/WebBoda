@@ -186,40 +186,46 @@ export default function Formulario(){
             <form key={invitado.id ?? "sin-invitado"} onSubmit={guardarRespuestas}>
                 <div id="sec_asitencia" className="caja">
                     <h4>¿Asistirás?</h4>
-                    <div>
+                    <div className="opcion-radio">
                         <input type="radio" id="input_si" name="asistencia" value="true" defaultChecked={invitado.asistencia===true} onChange={(e) => setAsistencia(true)} required></input>
-                        <label htmlFor="input_si">Sí </label> <div className="emojis"> <img src={iConfirmacion} alt="confirmacion" /></div>
+                        <img src={iConfirmacion} alt="confirmacion" />
+                        <label htmlFor="input_si">Sí </label>  
                     </div>
-                    <div>
+                    <div className="opcion-radio">
                         <input type="radio" id="input_no" name="asistencia" value="false" defaultChecked={invitado.asistencia===false} onChange={(e) => setAsistencia(false)} required></input>
-                        <label htmlFor="input_no">No <div className="emojis"><img src={iDeclinacion} alt="confirmacion" /></div></label>
+                        <img src={iDeclinacion} alt="confirmacion" />
+                        <label htmlFor="input_no">No </label>
                     </div>
                 </div>
                 {!invitado.bebe && <><div id="sec_comida" className="caja">
                     <h4>¿Qué te gustaría comer?</h4>
                     {!invitado.menor && !invitado.bebe &&
                     <>
-                    <div>
+                    <div className="opcion-radio">
                         <input type="radio" id="input_carne" name="comida" value="carne" defaultChecked={invitado.menu==="carne"} disabled={!asistencia} required></input>
-                        <label htmlFor="input_carne">Carne </label> <div className="emojis"> <img src={iCarne} alt="carne" /></div>
+                        <img src={iCarne} alt="carne" />
+                        <label htmlFor="input_carne">Carne </label> 
                     </div>
                     
-                    <div>
+                    <div className="opcion-radio">
                         <input type="radio" id="input_pescado" name="comida" value="pescado" defaultChecked={invitado.menu==="pescado"} disabled={!asistencia} required></input>
-                        <label htmlFor="input_pescado">Pescado</label> <div className="emojis"> <img src={iPescado} alt="pescado" /></div>
+                        <img src={iPescado} alt="pescado" />
+                        <label htmlFor="input_pescado">Pescado</label> 
                     </div>
-                    <div>
+                    <div className="opcion-radio">
                         <input type="radio" id="input_vegetariano" name="comida" value="vegetariana" defaultChecked={invitado.menu==="vegetariana"} disabled={!asistencia} required></input>
-                        <label htmlFor="input_vegtariano">Opción vegetariana</label><div className="emojis"> <img src={iVegetariana} alt="vegetariana" /></div>
+                        <img src={iVegetariana} alt="vegetariana" />
+                        <label htmlFor="input_vegtariano">Opción vegetariana</label>
                     </div>
-                    <div>
+                    <div className="opcion-radio">
                         <input type="radio" id="input_celiaco" name="comida" value="celiaca" defaultChecked={invitado.menu==="celiaca"} disabled={!asistencia} required></input>
-                        <label htmlFor="input_celiaco">Opción celiaca</label> <div className="emojis"> <img src={iSinGluten} alt="sin gluten" /></div>
+                        <img src={iSinGluten} alt="sin gluten" />
+                        <label htmlFor="input_celiaco">Opción celiaca</label>
                     </div>
                     </>}
                     {invitado.menor &&
                     <>
-                    <div>
+                    <div className="opcion-radio">
                         <input type="radio" id="input_infantil" name="comida" value="infantil" defaultChecked={invitado.menu==="infantil"} disabled={!asistencia} required></input>
                         <label htmlFor="input_infantil">Menú infantil <span className="emojis">&#10024;</span></label>
                     </div>

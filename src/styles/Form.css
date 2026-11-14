@@ -47,15 +47,14 @@ body {
     text-align: center;
 }
 
-.emojis{
-    margin-right: 2%;
+.opcion-radio{
     display: flex;
     align-items: center;
 }
 
-.emojis img{
-    width: 128px;
-    height: 128px;
+.opcion-radio img{
+    width: 64px;
+    height: 64px;
 }
 
 .botonera {
