@@ -52,9 +52,19 @@ body {
     align-items: center;
 }
 
-.opcion-radio img{
+.iconos{
     width: 64px;
     height: 64px;
+}
+
+.sec-alergias{
+    display: flex;
+}
+
+.sec-alergias img{
+    width: 48px;
+    height: 48px;
+    margin-left: 2px;
 }
 
 .botonera {

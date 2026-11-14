@@ -188,12 +188,12 @@ export default function Formulario(){
                     <h4>¿Asistirás?</h4>
                     <div className="opcion-radio">
                         <input type="radio" id="input_si" name="asistencia" value="true" defaultChecked={invitado.asistencia===true} onChange={(e) => setAsistencia(true)} required></input>
-                        <img src={iConfirmacion} alt="confirmacion" />
+                        <img className="iconos" src={iConfirmacion} alt="confirmacion" />
                         <label htmlFor="input_si">Sí </label>  
                     </div>
                     <div className="opcion-radio">
                         <input type="radio" id="input_no" name="asistencia" value="false" defaultChecked={invitado.asistencia===false} onChange={(e) => setAsistencia(false)} required></input>
-                        <img src={iDeclinacion} alt="confirmacion" />
+                        <img className="iconos" src={iDeclinacion} alt="confirmacion" />
                         <label htmlFor="input_no">No </label>
                     </div>
                 </div>
@@ -203,23 +203,23 @@ export default function Formulario(){
                     <>
                     <div className="opcion-radio">
                         <input type="radio" id="input_carne" name="comida" value="carne" defaultChecked={invitado.menu==="carne"} disabled={!asistencia} required></input>
-                        <img src={iCarne} alt="carne" />
+                        <img className="iconos" src={iCarne} alt="carne" />
                         <label htmlFor="input_carne">Carne </label> 
                     </div>
                     
                     <div className="opcion-radio">
                         <input type="radio" id="input_pescado" name="comida" value="pescado" defaultChecked={invitado.menu==="pescado"} disabled={!asistencia} required></input>
-                        <img src={iPescado} alt="pescado" />
+                        <img className="iconos" src={iPescado} alt="pescado" />
                         <label htmlFor="input_pescado">Pescado</label> 
                     </div>
                     <div className="opcion-radio">
                         <input type="radio" id="input_vegetariano" name="comida" value="vegetariana" defaultChecked={invitado.menu==="vegetariana"} disabled={!asistencia} required></input>
-                        <img src={iVegetariana} alt="vegetariana" />
+                        <img className="iconos" src={iVegetariana} alt="vegetariana" />
                         <label htmlFor="input_vegtariano">Opción vegetariana</label>
                     </div>
                     <div className="opcion-radio">
                         <input type="radio" id="input_celiaco" name="comida" value="celiaca" defaultChecked={invitado.menu==="celiaca"} disabled={!asistencia} required></input>
-                        <img src={iSinGluten} alt="sin gluten" />
+                        <img className="iconos" src={iSinGluten} alt="sin gluten" />
                         <label htmlFor="input_celiaco">Opción celiaca</label>
                     </div>
                     </>}
@@ -234,7 +234,10 @@ export default function Formulario(){
                 </div></>}
                 {!invitado.bebe && 
                 <><div id="sec_dieta" className="caja">
-                    <h4>¿Tienes alguna alergia que debamos tener en cuenta?</h4>
+                    <div className="sec-alergias">  
+                        <h4>¿Alguna alergia a tener en cuenta?</h4> 
+                        <img className="iconos" src={iAlergia} alt="alergias" />
+                    </div>
                     {invitado.alergia !== null 
                         ? <div className="caja_texto">
                             <textarea id="alergias" name="alergias" rows="3" col="3" defaultValue={invitado.alergia} disabled={!asistencia}></textarea>
