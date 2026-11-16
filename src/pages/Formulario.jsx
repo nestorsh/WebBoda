@@ -67,7 +67,8 @@ export default function Formulario(){
                 menu:null,
                 dieta:null, 
                 denominacion: grupo,
-                observaciones: null
+                observaciones: null,
+                cancion: null
             }   
         }
         setInvitado(nInvitado);
@@ -144,6 +145,7 @@ export default function Formulario(){
                 die: formulario.get("dieta") ?? null,
                 men: formulario.get("comida") ?? null,
                 obs: formulario.get("observaciones") ?? null,
+                can: formulario.get("cancion") ?? null,
             });
             setMensajeExitoso("¡Datos guardados!");
             setInvitadoSeleccionado(0);
@@ -236,7 +238,7 @@ export default function Formulario(){
                 <><div id="sec_dieta" className="caja">
                     <div className="sec-alergias">  
                         <h4>¿Alguna alergia a tener en cuenta?</h4> 
-                        <img className="iconos" src={iAlergia} alt="alergias" />
+                        {/*<img className="iconos" src={iAlergia} alt="alergias" /> */}
                     </div>
                     {invitado.alergia !== null 
                         ? <div className="caja_texto">
@@ -249,7 +251,20 @@ export default function Formulario(){
                     
                 </div></>}
                 {!invitado.bebe && !invitado.menor && 
-                <><div id="sec_dieta" className="caja">
+                <><div id="sec_cancion" className="caja">
+                    <h4>¿Te gustaría que pusieramos alguna canción?</h4>
+                    {invitado.cancion !== null 
+                        ? <div className="caja_texto">
+                            <textarea type="text" id="cancion" name="cancion" rows="3" col="3" defaultValue={invitado.cancion} disabled={!asistencia}></textarea>
+                        </div>
+                        : <div className="caja_texto">
+                            <textarea type="text" id="cancion" name="cancion" rows="3" col="3" placeholder="Escribe tu canción aquí" disabled={!asistencia}></textarea>
+                        </div>
+                    }         
+                    
+                </div></>}
+                {!invitado.bebe && !invitado.menor && 
+                <><div id="sec_sugerencias" className="caja">
                     <h4>Por último... ¿te gustaría comentarnos algo que debamos tener en cuenta?</h4>
                     {invitado.observaciones !== null 
                         ? <div className="caja_texto">
