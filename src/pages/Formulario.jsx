@@ -9,10 +9,12 @@ import iConfirmacion from "../assets/confirmacion.png";
 import iDeclinacion from "../assets/declinacion.png";
 import iAlergia from "../assets/iconoAlergia.png";
 import iMusica from "../assets/iconoMusica.png";
+import iObservaciones from "../assets/iconoObservaciones.png";
 import iCarne from "../assets/carne.png";
 import iPescado from "../assets/pescado.png";
 import iSinGluten from "../assets/sinGluten.png";
 import iVegetariana from "../assets/vegetariana.png";
+import iInfantil from "../assets/menuInfantil.png";
  
 
 
@@ -229,7 +231,7 @@ export default function Formulario(){
                     <>
                     <div className="opcion-radio">
                         <input type="radio" id="input_infantil" name="comida" value="infantil" defaultChecked={invitado.menu==="infantil"} disabled={!asistencia} required></input>
-                        <label htmlFor="input_infantil">Menú infantil <span className="emojis">&#10024;</span></label>
+                        <img className="iconos" src={iInfantil} alt="menú infantil" />
                     </div>
                     </>}
                                         
