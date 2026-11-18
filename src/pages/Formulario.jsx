@@ -232,6 +232,7 @@ export default function Formulario(){
                     <div className="opcion-radio">
                         <input type="radio" id="input_infantil" name="comida" value="infantil" defaultChecked={invitado.menu==="infantil"} disabled={!asistencia} required></input>
                         <img className="iconos" src={iInfantil} alt="menú infantil" />
+                        <label htmlFor="input_infantil">Menú infantil</label>
                     </div>
                     </>}
                                         
