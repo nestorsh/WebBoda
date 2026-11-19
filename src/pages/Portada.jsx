@@ -1,5 +1,6 @@
 import Cabecera from "./Cabecera";
 import Footer from "./Footer";
+import Cuenta from "../component/CuentaAtras";
 import "../styles/Portada.css";
 import { Link, useParams } from "react-router-dom";
 import { useEffect } from "react";
@@ -10,6 +11,7 @@ import imagenIglesia from "../assets/iglesia.png";
 import imagenInvitacion from "../assets/invitacion.png";
 import collage from "../assets/collage.svg";
 import logo from "../assets/logo.png";
+import CuentaAtras from "../component/CuentaAtras";
 
 function Portada() {
   const location = useLocation();
@@ -29,7 +31,7 @@ function Portada() {
         <header className="portada" id="inicio">
           <div className="portada-contenido">
             <div className="portada-texto">
-
+              
               <h1>
                 Néstor
                 <span className="subtitulo">
@@ -39,7 +41,7 @@ function Portada() {
               </h1>
 
               <div className="raya" />
-
+              
               <p className="fecha">
                 24 JULIO 2027
               </p>
@@ -60,12 +62,15 @@ function Portada() {
             </div>
           </div>
 
+          <CuentaAtras/>
+          
           <div className="separador-floral" aria-hidden="true">
             <span />
             <span className="mini-flor">❀</span>
             <span />
           </div>
         </header>
+
 
         <section className="historia" id="historia">
           <div className="seccion-texto">
