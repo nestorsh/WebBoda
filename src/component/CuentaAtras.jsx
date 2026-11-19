@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 function CuentaAtras() {
 
     const fechaBoda = new Date("2027-07-24T00:00:00").getTime();
+
+    const formatear = (num) => String(num).padStart(2,'0');
     
     function calcular(){
         const ahora=new Date().getTime();
@@ -19,10 +21,10 @@ function CuentaAtras() {
         }
 
         return {
-            dias: Math.floor(diferencia/(1000*3600*24)),
-            horas: Math.floor((diferencia/(1000*3600))%24),
-            minutos: Math.floor((diferencia/(1000*60))%60),
-            segundos: Math.floor((diferencia/1000)%60)
+            dias: formatear(Math.floor(diferencia/(1000*3600*24))),
+            horas: formatear(Math.floor((diferencia/(1000*3600))%24)),
+            minutos: formatear(Math.floor((diferencia/(1000*60))%60)),
+            segundos: formatear(Math.floor((diferencia/1000)%60))
         }
     }
 
