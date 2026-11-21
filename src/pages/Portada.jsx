@@ -8,7 +8,7 @@ import { useLocation } from "react-router-dom";
 import imagenFecha from "../assets/fecha.png";
 import imagenCopas from "../assets/copas.png";
 import imagenIglesia from "../assets/iglesia.png";
-import imagenInvitacion from "../assets/invitacion.png";
+import fotoNuestra from "../assets/foto_nuestra.png";
 import collage from "../assets/collage.svg";
 import logo from "../assets/logo.png";
 import CuentaAtras from "../component/CuentaAtras";
@@ -58,7 +58,7 @@ function Portada() {
             </div>
 
             <div className="portada-ilustracion">
-              <img src={logo} alt="logo" />
+              <img src={fotoNuestra} alt="foto" />
             </div>
           </div>
 
@@ -153,7 +153,7 @@ function Portada() {
           </div>
 
           <div className="confirmacion-ilustracion">
-            <img src={imagenInvitacion} alt="Imagen anillos" />
+            <img src={logo} alt="logo" />
           </div>
         </section>
 

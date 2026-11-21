@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 function CuentaAtras() {
 
-    const fechaBoda = new Date("2027-07-24T00:00:00").getTime();
+    const fechaBoda = new Date("2027-07-24T13:15:00").getTime();
 
     const formatear = (num) => String(num).padStart(2,'0');
     
