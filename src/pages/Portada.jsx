@@ -58,7 +58,7 @@ function Portada() {
             </div>
 
             <div className="portada-ilustracion">
-              <img src={fotoNuestra} alt="foto" />
+              <img id ="nuestra-foto" src={fotoNuestra} alt="foto" />
             </div>
           </div>
 

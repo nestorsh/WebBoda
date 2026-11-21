@@ -136,6 +136,11 @@ svg {
   min-width: 0;
 }
 
+#nuestra-foto{
+  width:250px;
+  height: auto;
+}
+
 .flores {
   width: min(100%, 300px);
   height: auto;
