@@ -33,7 +33,7 @@ function Portada() {
             <div className="portada-texto">
               
               <h1>
-                Néstor
+                <spam className="primerNombre">Néstor</spam>
                 <span className="subtitulo">
                   <span className="ampersand">&amp;</span>
                   {" "}Kimberley

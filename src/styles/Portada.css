@@ -94,11 +94,15 @@ svg {
 }
 
 .ampersand {
-  color: var(--fucsia);
+  color: var(--verde-oscuro);
+}
+
+.primerNombre {
+  color:var(--coral);
 }
 
 .subtitulo {
-  color: var(--coral);
+  color: var(--fucsia);
 }
 
 .raya {

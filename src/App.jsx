@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Portada from "./pages/Portada.jsx";
 import Formulario from "./pages/Formulario.jsx";
+import Enlace from "./pages/Enlaces.jsx";
 
 export default function App() {
     return (
@@ -19,6 +20,11 @@ export default function App() {
                 <Route
                     path="/inicio/:grupo"
                     element={<Portada />}
+                />
+
+                <Route
+                    path="/enlace"
+                    element={<Enlace/>}
                 />
 
 

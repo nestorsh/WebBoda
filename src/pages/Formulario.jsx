@@ -19,7 +19,6 @@ import iInfantil from "../assets/menuInfantil.png";
 
 
 export default function Formulario(){
-    //const codigoGrupo='fe14fca4-d096-4113-965b-c4f950dcc8b5';
     const codigoGrupo=useParams().grupo;
 
     const [invitados, setInvitados] = useState([]);
@@ -41,12 +40,12 @@ export default function Formulario(){
         async function obtenerInvitados () {
             const {data, error} = await supabase.schema('public').rpc("ver_invitados", {grupo:codigoGrupo});
             setGrupo(data[0].denominacion);
-            console.log('Datos recibidos:', data);
+            //console.log('Datos recibidos:', data);
 
 
             if(error){
                 setError(error.message);
-                console.error('Error de Supabase:', error);
+                //console.error('Error de Supabase:', error);
                 return;
             }
 
